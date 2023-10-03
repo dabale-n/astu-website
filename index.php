@@ -482,7 +482,7 @@ error_reporting(0);
         <div class="col-md-12 p-0 home_page">
           <div class="video_container">
             <video id="video-background" autoplay loop muted>
-              <source src="images/b-g.mp4" type="video/mp4">
+              <source src="images/back_vido.mp4" type="video/mp4">
             </video>
               <div class="content">
                 <h1 class="ms-5 mb-2 animated-text">Welcome to ASTU</h1>
