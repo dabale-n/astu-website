@@ -18,12 +18,9 @@ if(isset($_POST['submit']))
         $url=implode("-",$arr);
 
         $file=$_FILES["file"]["name"];
-        // get the image extension
+        
         $extension = substr($file,strlen($file)-4,strlen($file));
-        // allowed extensions
-        //$allowed_extensions = array(".jpg", ".jpeg", ".png", ".gif", ".mp4", ".avi", ".mov");
         $allowed_extensions = array(".pdf",".doc",".odt",".rtf",".txt",".xls","xlsx",".csv",".ods");
-        // Validation for allowed extensions .in_array() function searches an array for a specific value.
         if(!in_array($extension,$allowed_extensions))
         {
         
@@ -31,9 +28,7 @@ if(isset($_POST['submit']))
         }
         else
         {
-        //rename the image file
-    
-        // Code for move image into directory
+       
         move_uploaded_file($_FILES["file"]["tmp_name"],"postfiles/".$file);
 
         $status=1;
@@ -57,22 +52,15 @@ if(isset($_POST['submit']))
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <!-- App title -->
-        <title>Astu website | Add news</title>
-
-        <!-- Summernote css -->
-        <link href="plugins/summernote/summernote.css" rel="stylesheet" />
-
-        <!-- Select2 -->
+     
+        <title>Astu website | Add news</title> 
+        <link href="plugins/summernote/summernote.css" rel="stylesheet" />     
         <link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- Jquery filer css -->
         <link href="plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
         <link href="plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
 
-        <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -101,7 +89,7 @@ if(isset($_POST['submit']))
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
-            <!-- ============================================================== -->
+           
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -213,8 +201,6 @@ if(isset($_POST['submit']))
         <script>
             var resizefunc = [];
         </script>
-
-        <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/detect.js"></script>
@@ -231,11 +217,9 @@ if(isset($_POST['submit']))
         <script src="plugins/select2/js/select2.min.js"></script>
         <!-- Jquery filer js -->
         <script src="plugins/jquery.filer/js/jquery.filer.min.js"></script>
-
-        <!-- page specific js -->
+   
         <script src="assets/pages/jquery.blog-add.init.js"></script>
 
-        <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 
